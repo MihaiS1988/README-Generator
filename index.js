@@ -1,4 +1,4 @@
-//Global require's//
+//Global require//
 const inquirer = require('inquirer');
 const generateData = require('./assets/generateData');
 const fs = require('fs');
@@ -113,7 +113,7 @@ const questions = [
 ]
     
     // Function to write README file//
-    function writeToFile(fileName, data) {
+    function writeTheFile(fileName, data) {
         fs.writeFile(fileName, data, (err) => {
             if (err)
                 throw err;
@@ -126,7 +126,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
-        writeToFile("README.md", generateData(userInput));
+        writeTheFile("README.md", generateData(userInput));
     });
 };
 
