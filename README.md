@@ -1,7 +1,7 @@
 # README Generator
 
 ## Licensing:
-    [![license](https://img.shields.io/badge/license-Mozilla-blue)](https://shields.io)
+[![license](https://img.shields.io/badge/license-Mozilla-blue)](https://shields.io)
     
 ## Table of Contents 
 * [Description](#description)
