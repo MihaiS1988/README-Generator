@@ -1,4 +1,4 @@
-//Global require's//
+//Global require//
 const inquirer = require('inquirer');
 const fs = require('fs');
 
