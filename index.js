@@ -99,7 +99,7 @@ const questions = [
     //E-mail address//
     {    
     type: 'input',
-    name: 'e-mail',
+    name: 'email',
     message: 'What is your e-mail address? (Required)',
     validate: tileInput => {
         if (tileInput) {

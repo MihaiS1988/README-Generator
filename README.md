@@ -7,13 +7,13 @@
     - [Usage](#usage)
     - [Contact Links](#contact-Links)
     ## Description:
-    asdasddsaaasd
+    this is a professional readme generator
     ## Installation:
-    hjdfhjdfjhjkakjdjkadsjkadsfjkadsfjkadsjkajd
+    no installation required
     ## Usage:
-    askasdkuhakjs
+    haskasdkjaskaaa
     ## License:
     Mozilla
     ## Contact Links:
-    - Github: [mihais](https://github.com/mihais);
+    - Github: [mihais1988](https://github.com/mihais1988);
     - Email: undefined 
