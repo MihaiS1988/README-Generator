@@ -1,6 +1,5 @@
 //Global require's//
 const inquirer = require('inquirer');
-const generateData = require('./assets/generateData');
 const fs = require('fs');
 
 //Arrays of questions for user//
@@ -111,9 +110,32 @@ const questions = [
     }
     }
 ]
+
+// function to generate the data for README
+function generateData(data) {
+    return `# ${data.title}
+    ## Licensing:
+    [![license](https://img.shields.io/badge/license-${data.licensing}-blue)](https://shields.io)
+    ## Table of Contents 
+    - [Description](#description)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Contact Links](#contact-Links)
+    ## Description:
+    ${data.description}
+    ## Installation:
+    ${data.installation}
+    ## Usage:
+    ${data.usage}
+    ## License:
+    ${data.licensing}
+    ## Contact Links:
+    - Github: [${data.github}](https://github.com/${data.github});
+    - Email: ${data.email} `;
+  }
     
     // Function to write README file//
-    function writeToFile(fileName, data) {
+    function writeTheFile(fileName, data) {
         fs.writeFile(fileName, data, (err) => {
             if (err)
                 throw err;
@@ -126,7 +148,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
-        writeToFile("README.md", generateData(userInput));
+        writeTheFile("README.md", generateData(userInput));
     });
 };
 
