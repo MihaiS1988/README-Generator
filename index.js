@@ -111,7 +111,7 @@ const questions = [
     }
 ]
 
-// function to generate the data for README
+// function to generate the data for README//
 function generateData(data) {
     return `# ${data.title}
     ## Licensing:
@@ -135,7 +135,7 @@ function generateData(data) {
   }
     
     // Function to write README file//
-    function writeTheFile(fileName, data) {
+    function writeInsideFile(fileName, data) {
         fs.writeFile(fileName, data, (err) => {
             if (err) {
                 console.log(err);
@@ -144,12 +144,12 @@ function generateData(data) {
         });
     };
 
-    // Function to initialize app
+    // Function to initialize the app//
 function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
-        writeTheFile("README.md", generateData(userInput));
+        writeInsideFile("README.md", generateData(userInput));
     });
 };
 
