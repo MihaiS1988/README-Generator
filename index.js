@@ -8,7 +8,7 @@ const questions = [
     {
     type: 'input',
     name: 'title',
-    message: 'What is the tile of the project? (Required)',
+    message: 'What is the tile of the project?',
     validate: tileInput => {
         if (tileInput) {
             return true;
@@ -23,7 +23,7 @@ const questions = [
    {
     type: 'input',
     name: 'description',
-    message: 'Please provide a description of your project (Required)',
+    message: 'Please provide a description of your project',
     validate: tileInput => {
         if (tileInput) {
             return true;
@@ -54,7 +54,7 @@ const questions = [
     {    
     type: 'input',
     name: 'installation',
-    message: 'Please provide installation instructions for your project (Required)',
+    message: 'Please provide installation instructions for your project',
     validate: tileInput => {
         if (tileInput) {
          return true;
@@ -69,7 +69,7 @@ const questions = [
         {    
     type: 'input',
      name: 'usage',
-    message: 'Please provide usage instructions for your project (Required)',
+    message: 'Please provide usage instructions for your project',
     validate: tileInput => {
         if (tileInput) {
         return true;
@@ -84,7 +84,7 @@ const questions = [
      {    
     type: 'input',
     name: 'github',
-    message: 'What is your GitHub username? (Required)',
+    message: 'What is your GitHub username?',
     validate: tileInput => {
         if (tileInput) {
          return true;
@@ -99,7 +99,7 @@ const questions = [
     {    
     type: 'input',
     name: 'email',
-    message: 'What is your e-mail address? (Required)',
+    message: 'Please provide an e-mail address?',   
     validate: tileInput => {
         if (tileInput) {
         return true;
@@ -137,9 +137,10 @@ function generateData(data) {
     // Function to write README file//
     function writeTheFile(fileName, data) {
         fs.writeFile(fileName, data, (err) => {
-            if (err)
-                throw err;
-            console.log('Success! Information transferred to the README!')
+            if (err) {
+                console.log(err);
+            } else
+            console.log('Success! Information added to the README!')
         });
     };
 
