@@ -135,7 +135,7 @@ function generateData(data) {
   }
     
     // Function to write README file//
-    function writeTheFile(fileName, data) {
+    function writeinsideFile(fileName, data) {
         fs.writeFile(fileName, data, (err) => {
             if (err) {
                 console.log(err);
@@ -149,7 +149,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
-        writeTheFile("README.md", generateData(userInput));
+        writeinsideFile("README.md", generateData(userInput));
     });
 };
 
